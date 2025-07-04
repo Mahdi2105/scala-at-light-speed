@@ -3,10 +3,10 @@ package com.rockthejvm
 object Basics extends App {
 
   // Defining a value
-  val meaningOfLife: Int = 42  // this is a constant, a val cannot
-                               // be reassigned
+  val meaningOfLife: Int = 42   // this is a constant, a val cannot
+                                // be reassigned
 
-  val aBoolean = false         // This is auto assigned due to the value
+  val aBoolean = false          // This is auto assigned due to the value
 
   // Int, Boolean, Char, Double, Float, String and others
 
@@ -26,7 +26,7 @@ object Basics extends App {
   val chainedIfExpression = {
     if (meaningOfLife > 45) 56
     else if (meaningOfLife < 0) 111
-    else if (meaningOfLife > 0) 555  // This should be the output
+    else if (meaningOfLife > 0) 555   // This should be the output
     else 0
   }
 
