@@ -90,8 +90,8 @@ object ObjectOrientation extends App{
   //
   //   val newDog = new Dog()
 
-  // Singleton Object
-  // Singleton has ONLY ONE
+  // Singleton Object -  In Scala, an object is a Singleton
+  // Singleton has ONLY ONE instance
   // Unlike classes, you CAN'T create an instance using 'new'
   // Instantiated ONCE by Scala runtime, and this is used everywhere
   object MySingleton {   // The ONLY instance of the MySingleton type
@@ -101,10 +101,12 @@ object ObjectOrientation extends App{
                                      // to allow instances of it to be called like so:
                                      // className(*args here*) and it is the same as:
                                      // className.apply(*args here*)
+                                     // Note: it can be used on Singletons too :D
   }
 
   MySingleton.mySpecialMethod()
   MySingleton.apply(65)   // These two are
   MySingleton(65)         // the SAME
+
 
 }
