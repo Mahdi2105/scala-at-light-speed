@@ -108,5 +108,12 @@ object ObjectOrientation extends App{
   MySingleton.apply(65)   // These two are
   MySingleton(65)         // the SAME
 
+  // Companions - Companion Object
+  // Companions can access eath other's private fields/methods
+  // Companions refer to an Object and Class that have the same name
+  //    and they are defined in the same source file.
+  // The singleton Animal and the instances of Animal are different
+  object Animal { // This works even though we have a class called Animal
 
+  }
 }
