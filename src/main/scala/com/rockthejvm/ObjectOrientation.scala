@@ -110,10 +110,26 @@ object ObjectOrientation extends App{
 
   // Companions - Companion Object
   // Companions can access eath other's private fields/methods
-  // Companions refer to an Object and Class that have the same name
+  // Companions refer to an Object and Class/Trait that have the same name
   //    and they are defined in the same source file.
   // The singleton Animal and the instances of Animal are different
   object Animal { // This works even though we have a class called Animal
 
+    val canLiveIndefinately = false
   }
+
+  val animalsCanLiveForever = Animal.canLiveIndefinately  // 'Static Fields'
+
+  // Case Classes - Lightweight Data Structures with some boilerplate
+  // Sensible equals and hash code
+  // Sensible and quick serialisation
+  // Auto has a Companion with apply method
+  // May be constructed without the keyword 'new'
+  case class Person(name: String, age: Int)
+
+  val bob = Person("Bob", 30)  // Note that no 'new' keyword is used
+  // Same as val bob = Person.apply("Bob", 30)
+  // Note that 'new' can be used, but it isn't as idiomatic
+
+
 }
