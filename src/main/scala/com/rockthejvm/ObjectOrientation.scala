@@ -131,5 +131,39 @@ object ObjectOrientation extends App{
   // Same as val bob = Person.apply("Bob", 30)
   // Note that 'new' can be used, but it isn't as idiomatic
 
+  // Exceptions
+  try {
+    // Code that can throw
+    val x: String = null
+    x.length
+  } catch {
+    case e: Exception => "Insert Error Message"
+  } finally {   // 'finally' executes code no matter what
+    // Insert code to execute
+  }
+
+  // Generics - Reusable and Type-Safe Code
+  // Allow classes, traits, and methods to work with *any* type
+  // Defined using type parameters in square brackets, e.g. [A], [T]
+  // Helps avoid duplication and makes code flexible
+  // Still fully type-checked at compile time — no casting needed
+  // Used all the time in collections like List[Int], Map[String, Double]
+  // You can restrict types using bounds (A <: Animal)
+  // Can be used in methods as well as in classes/traits
+  abstract class MyList[T] {
+    def head: T
+    def tail: MyList[T]
+  }  // This is not used in the next part
+
+  // Using a generic with a concrete type
+  val aList: List[Int] = List(1, 2, 3) //  List.apply(1,2,3) This is actually
+                                       //  a list companion object
+  val first = aList.head
+  val rest = aList.tail
+
+  val aStringList = List("Hello", "Scala")
+  val firstString = aStringList.head
+
+  println(rest + " " + firstString)
 
 }
