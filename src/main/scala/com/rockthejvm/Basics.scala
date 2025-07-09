@@ -18,7 +18,7 @@ object Basics extends App {
 
   val anExpression = 2 + 3
 
-  // if -Expression-
+  // If -Expression-
 
   val ifExpression = if (meaningOfLife > 43) 56 else 999
   println("If Expression: " + ifExpression)
@@ -38,8 +38,8 @@ object Basics extends App {
     // definitions
     val aLocalValue = 67
 
-    aLocalValue + 3           // The last expression(70) becomes
-                              // the value of the code block
+    aLocalValue + 3   // The last expression(70) becomes
+                      // the value of the code block
   }
 
   println("Code block: " + aCodeBlock)
@@ -59,7 +59,7 @@ object Basics extends App {
   println("Factorial: " + factorial(5))
 
   // Unit Type - No meaningful value === "void" in other languages
-  // type of SIDE EFFECTS - they dont carry any value that can be used
+  // type of SIDE EFFECTS - they don't carry any value that can be used
   // and example is the println function
   println("This has no meaningful value")
 

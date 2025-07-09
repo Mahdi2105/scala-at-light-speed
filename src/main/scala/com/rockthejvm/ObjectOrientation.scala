@@ -127,7 +127,7 @@ object ObjectOrientation extends App{
   // May be constructed without the keyword 'new'
   case class Person(name: String, age: Int)
 
-  val bob = Person("Bob", 30)  // Note that no 'new' keyword is used
+  val bob = Person("Bob", 30)   // Note that no 'new' keyword is used
   // Same as val bob = Person.apply("Bob", 30)
   // Note that 'new' can be used, but it isn't as idiomatic
 
@@ -156,14 +156,14 @@ object ObjectOrientation extends App{
   }  // This is not used in the next part
 
   // Using a generic with a concrete type
-  val aList: List[Int] = List(1, 2, 3) //  List.apply(1,2,3) This is actually
-                                       //  a list companion object
+  val aList: List[Int] = List(1, 2, 3)   //  List.apply(1,2,3) This is actually
+                                         //  a list companion object
   val first = aList.head
   val rest = aList.tail
-                                                // Here .head is being used and it is
-  val aStringList = List("Hello", "Scala")      // working with strings as well as
-  val firstString = aStringList.head            // ints, and it will work with other
-                                                // Types too
+                                             // Here .head is being used and it is
+  val aStringList = List("Hello", "Scala")   // working with strings as well as
+  val firstString = aStringList.head         // ints, and it will work with other
+                                             // Types too
   println(rest + " " + firstString)
 
   // In Scala, we operate with IMMUTABLE values/objects
