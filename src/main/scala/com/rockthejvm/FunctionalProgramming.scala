@@ -54,4 +54,29 @@ object FunctionalProgramming extends App{
   println(aMappedList)                                     // x should be an Int because
                                                            // it is auto inferred, but I did
 
+  // val aFlapMappedList = List(1, 2, 3).flatMap(x => List(x, 2 * x))
+  // Here is the same thing with alternative syntax (spacing):
+  val aFlapMappedList = List(1, 2, 3).flatMap { x =>
+    List(x, 2 * x)
+  }
+  // Without flatMap it would look like:
+  // List(List(1, 2), List(2, 4), List(3, 6))
+  println(aFlapMappedList)
+
+  // val aFilteredList = List(1, 2, 3, 4, 5).filter { x =>
+  //   x <= 3
+  // }
+  // Here is a shorter syntax:
+  val aFilteredList = List(1, 2, 3, 4, 5).filter(_ <= 3) // _ is the same as:
+  println(aFilteredList)                                 // arg => arg
+
+  // All pairs between 1, 2, 3 and 'a', 'b', 'c'
+  val allPairs = List(1, 2, 3).flatMap { number =>
+    List('a', 'b', 'c').map { letter =>
+      s"$number$letter"
+    }
+  }
+
+  println(allPairs)
+
 }
