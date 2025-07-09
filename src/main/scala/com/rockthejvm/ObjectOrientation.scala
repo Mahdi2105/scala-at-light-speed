@@ -160,10 +160,17 @@ object ObjectOrientation extends App{
                                        //  a list companion object
   val first = aList.head
   val rest = aList.tail
-
-  val aStringList = List("Hello", "Scala")
-  val firstString = aStringList.head
-
+                                                // Here .head is being used and it is
+  val aStringList = List("Hello", "Scala")      // working with strings as well as
+  val firstString = aStringList.head            // ints, and it will work with other
+                                                // Types too
   println(rest + " " + firstString)
 
+  // In Scala, we operate with IMMUTABLE values/objects
+  //    so any modifications should return a new variable/object/etc.
+  // This is good because it works miracles in multithreaded
+  //    or distributed environments
+  // It also helps make sense of the code easier ("reasoning about")
+
+  // Scala is the closest to the Object Orientated ideal
 }
