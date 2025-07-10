@@ -69,6 +69,7 @@ object FunctionalProgramming extends App{
   // Here is a shorter syntax:
   val aFilteredList = List(1, 2, 3, 4, 5).filter(_ <= 3) // _ is the same as:
   println(aFilteredList)                                 // arg => arg
+  // Here the _ acts as a lambda parameter, in other cases, it has different roles
 
   // All pairs between 1, 2, 3 and 'a', 'b', 'c'
   val allPairs = List(1, 2, 3).flatMap { number =>
@@ -78,5 +79,12 @@ object FunctionalProgramming extends App{
   }
 
   println(allPairs)
+
+  // Collections
+  val aList = List(1, 2, 3, 4, 5)
+  val firstElement = aList.head
+  val rest = aList.tail
+  val aPreparedList = 0 :: aList        // List(1, 2, 3, 4, 5)
+  val anExtendedList = 0 +: aList :+ 6  // List(1, 2, 3, 4, 5, 6)
 
 }
