@@ -94,6 +94,11 @@ object FunctionalProgramming extends App{
   println("Seq: " + aSequence)
   println("Seq(1): " + accessedElement)
 
+  // Vectors - Fast sequence implementation
+  // Has same methods as Lists or Sequences
+  // Better for indexing
+  val aVector = Vector(1, 2, 3, 4, 5)
+
 
 
 }
