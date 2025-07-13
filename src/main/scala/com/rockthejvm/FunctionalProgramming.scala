@@ -80,7 +80,9 @@ object FunctionalProgramming extends App{
 
   println(allPairs)
 
-  // Collections
+  // COLLECTIONS //
+
+  // Lists
   val aList = List(1, 2, 3, 4, 5)
   val firstElement = aList.head
   val rest = aList.tail
@@ -105,6 +107,18 @@ object FunctionalProgramming extends App{
   val anAddedSet = aSet + 5             // Set(1, 2, 3, 4, 5)
   val aRemovedSet = aSet - 3            // Set(1, 2, 4)
 
+  // Ranges - Good for iteration
+  val aRange = 1 to 1000              // Fictitious and does not contain 1-1000
+  val twoByTwo = aRange.map(_ * 2).toList   // but acts like it does
+  println(twoByTwo)                         // List(2, 4, 6,... 2000)
 
+  // Tuples - Groups of values under the same value
+  val aTuple = ("Bon Jovi", "Rock", 1982)
+
+  // Maps
+  val aPhonebook: Map[String, Int] = Map(
+    ("Daniel", 12345),   // These two
+    "Jane" -> 67890      // are the SAME
+  )
 
 }
