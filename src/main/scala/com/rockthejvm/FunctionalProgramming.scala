@@ -99,6 +99,12 @@ object FunctionalProgramming extends App{
   // Better for indexing
   val aVector = Vector(1, 2, 3, 4, 5)
 
+  // Sets - NO duplicates
+  val aSet = Set(1, 2, 3, 4, 1, 2, 3)   // Set(1, 2, 3, 4)
+  val setHas5 = aSet.contains(5)        // False
+  val anAddedSet = aSet + 5             // Set(1, 2, 3, 4, 5)
+  val aRemovedSet = aSet - 3            // Set(1, 2, 4)
+
 
 
 }
