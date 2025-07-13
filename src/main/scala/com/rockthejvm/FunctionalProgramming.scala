@@ -67,8 +67,8 @@ object FunctionalProgramming extends App{
   //   x <= 3
   // }
   // Here is a shorter syntax:
-  val aFilteredList = List(1, 2, 3, 4, 5).filter(_ <= 3) // _ is the same as:
-  println(aFilteredList)                                 // arg => arg
+  val aFilteredList = List(1, 2, 3, 4, 5).filter(_ <= 3)   // _ is the same as:
+  println(aFilteredList)                                   // arg => arg
   // Here the _ acts as a lambda parameter, in other cases, it has different roles
 
   // All pairs between 1, 2, 3 and 'a', 'b', 'c'
@@ -84,7 +84,16 @@ object FunctionalProgramming extends App{
   val aList = List(1, 2, 3, 4, 5)
   val firstElement = aList.head
   val rest = aList.tail
-  val aPreparedList = 0 :: aList        // List(1, 2, 3, 4, 5)
-  val anExtendedList = 0 +: aList :+ 6  // List(1, 2, 3, 4, 5, 6)
+  val aPreparedList = 0 :: aList         // List(1, 2, 3, 4, 5)
+  val anExtendedList = 0 +: aList :+ 6   // List(1, 2, 3, 4, 5, 6)
+  // Here +: prepends and :+ appends to a list
+
+  // Sequences
+  val aSequence : Seq[Int] = Seq(1, 2, 3)   // Seq.apply(1, 2, 3)
+  val accessedElement = aSequence(1)        // At index 1
+  println("Seq: " + aSequence)
+  println("Seq(1): " + accessedElement)
+
+
 
 }
