@@ -1,6 +1,8 @@
 package com.rockthejvm
 
-import scala.util.{Success, Failure, Try}
+import scala.concurrent.Future
+import scala.util.{Failure, Success, Try}
+import scala.concurrent.ExecutionContext.Implicits.global
 
 object Advanced extends App {
 
@@ -56,5 +58,23 @@ object Advanced extends App {
   }
 
   println("Try String Processing: " + anotherStringProcessing)
+
+  // Async Programming
+  // Evaluate something on another thread
+  // Futures
+  val aFuture = Future {
+    println("Loading....")
+    Thread.sleep(1000)
+    println("I have computed a value")
+    67
+  }
+  // Here the second println would not run because the main thread would have
+  //    ended before it could execute - so it does not run
+  // To combat this, we can make the main thread wait a little longer
+  Thread.sleep(2000)
+
+  // Future is a "collection" which has a value when it is evaluated
+
+
 
 }
