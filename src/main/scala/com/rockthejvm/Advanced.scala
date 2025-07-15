@@ -19,7 +19,7 @@ object Advanced extends App {
   val eagerValue = lazyValWithSideEffects + 1
   // NOW println would run because 'lazyValWithSideEffects' is being used
 
-  // "Pseudo Collections": Option, Try
+  // "Pseudo Collections": Option, Try (These 2 are monads)
   // Option - Checks for null
   def methodWhichCanReturnNull(): String = "Hello, Scala"
   //  if (methodWhichCanReturnNull() == null) {
@@ -75,6 +75,20 @@ object Advanced extends App {
 
   // Future is a "collection" which has a value when it is evaluated
 
+  // Implicits
+  // 1) Implicit Arguments
+  def aMethodWithImplicitArgs(implicit arg: Int) = arg + 1
+  implicit val myImplicitInt = 46
+  println(aMethodWithImplicitArgs)
+  // myImplicitInt is automatically assigned as an argument for aMethodWithImplicitArgs
 
+  // 2) Implicit Conversions
+  implicit class MyRichInt(n: Int) {
+    def isEven() = n % 2 == 0
+  }
+
+  println(23.isEven())
+  // Because this shouldn't normally work, it looks for an
+  //    implicit wrapper to try make it work
 
 }
